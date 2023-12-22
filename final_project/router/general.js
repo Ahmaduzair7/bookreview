@@ -10,8 +10,7 @@ public_users.post("/register", (req,res) => {
   if (username && password) {
     if (isValid) { 
       users.push({"username":username,"password":password});
-      res.send("The Following User has been Register")
-      res.send(users)
+      
       return res.status(200).json({message: "User successfully registred. Now you can login"});
       
     } else {
